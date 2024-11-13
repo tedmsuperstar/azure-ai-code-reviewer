@@ -5,7 +5,7 @@ Github action that runs a TypeScript Client for Azure AI. Azure is prompted to r
 The action will run when a PR is created or updated.
 
 Setup
--------
+--------
 1. Add the contents of .github/workflows and github-workflowers to your repo.
 
 2. Set up an Azure OpenAI Instance.
