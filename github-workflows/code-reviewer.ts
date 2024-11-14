@@ -104,7 +104,6 @@ async function main(): Promise<void> {
   });
 
   process.stdin.on('end', async () => {
-    console.log("data size: " + input.length);
 
     if (input.length > 50000) {
       await commentOnPR("The PR is too large for Open AI. Max size for the diff is 50000 characters.");
@@ -112,10 +111,8 @@ async function main(): Promise<void> {
     }
     const inputArray = breakIntoSubstrings(input, 4000);
 
-    console.log("input array length", inputArray.length);
     console.log("sleeping for 2000ms");
     await delay(2000);
-    console.log("input array item 1", inputArray[0].length);
 
     inputArray.push("The code is ready for your review. Please provide feedback on the code above.");
 
